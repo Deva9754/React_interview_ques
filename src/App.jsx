@@ -4,9 +4,9 @@ import SignUpPage from './components/SignUpPage';
 import LoginPage from './components/LoginPage';
 import AdminPage from './components/AdminPage';
 import HomePage from './components/HomePage';
-import Layout from './components/Layout';  // Import the Layout component
+import Layout from './components/Layout';  
 import { Provider } from 'react-redux';
-import store from './store';
+import store from '../src/store/store';
 
 const App = () => {
   return (
