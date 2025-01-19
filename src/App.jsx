@@ -9,6 +9,7 @@ import { Provider } from 'react-redux';
 import store from '../src/store/store';
 import Quiz from './components/Quiz';
 import Pagination from './components/Pagination';
+import LoginYup from './components/LoginYup';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/admin" element={<AdminPage />} />
           <Route path="/quiz" element={<Quiz/>}/>
           <Route path ="/pagination" element={<Pagination/>}/>
+          <Route path="/loginyup" element={<LoginYup/>}/>
         </Routes>
       </Router>
     </Provider>
