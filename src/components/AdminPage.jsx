@@ -131,7 +131,7 @@ const AdminPage = () => {
 
   // Dummy grid items
   const gridItems = [
-    'QUIZ', 'Pagination', 'Login(Yup)', 'Item 3',
+    'QUIZ', 'Pagination', 'Login-Yup', 'M/B-Tabs',
     'Item 4', 'Item 5', 'Item 6',
     'Item 7', 'Item 8'
   ];
@@ -163,8 +163,10 @@ const AdminPage = () => {
                 navigate('/quiz');
               } else if (item === 'Pagination') {
                 navigate('/pagination');
-              } else if (item === 'Login(Yup)') {
+              } else if (item === 'Login-Yup') {
                 navigate('/loginyup');
+              }else if (item === 'M/B-Tabs') {
+                navigate('/tabs');
               }
             }}
           >
