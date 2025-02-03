@@ -10,13 +10,13 @@ import store from '../src/store/store';
 import Quiz from './components/Quiz';
 import Pagination from './components/Pagination';
 import LoginYup from './components/LoginYup';
+import Tabs from './components/tabs/Tabs';
 
 const App = () => {
   return (
     <Provider store={store}>
       <Router>
         <Routes>
-          {/* Wrap pages with Layout component to include the header and home button */}
           <Route path="/" element={<HomePage />} />
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/login" element={<LoginPage />} />
@@ -24,6 +24,7 @@ const App = () => {
           <Route path="/quiz" element={<Quiz/>}/>
           <Route path ="/pagination" element={<Pagination/>}/>
           <Route path="/loginyup" element={<LoginYup/>}/>
+          <Route path='/tabs' element={<Tabs/>}/>
         </Routes>
       </Router>
     </Provider>
