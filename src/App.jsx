@@ -7,8 +7,8 @@ import AdminPage from './components/AdminPage';
 import HomePage from './components/HomePage';
 import { Provider } from 'react-redux';
 import store from '../src/store/store';
-import Quiz from './components/Quiz';
-import Pagination from './components/Pagination';
+import Quiz from './components/pagination/Quiz';
+import Pagination from './components/pagination/Pagination';
 import LoginYup from './components/LoginYup';
 import Tabs from './components/tabs/Tabs';
 

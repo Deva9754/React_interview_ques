@@ -1,5 +1,5 @@
 import { useState } from "react";
-import questions from "../constants/question.json";
+import questions from "../../constants/question.json";
 import Questions from "./Questions";
 import Result from "./Result";
 import { useNavigate } from "react-router-dom";
