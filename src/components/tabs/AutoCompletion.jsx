@@ -14,7 +14,7 @@ const fetchData= async ()=>{
         setSearchResult(cached[input]);
         return;
     }
-    // console.log("API CALL",input)
+     console.log("API CALL",input)
 const fetchResult = await fetch("https://dummyjson.com/recipes/search?q=" + input);
 const data= await fetchResult.json();
 console.log(data?.recipes,"Data")
