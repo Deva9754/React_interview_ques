@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const AutoCompletion = ()=>{
     const [input,setInput]=useState("");
     const [searchResult,setSearchResult]=useState([]);
-    const [showResult,setShowResult]=useState(true);
+    const [showResult,setShowResult]=useState(false);
     const [cached,setCached]=useState({});
     
 
@@ -45,7 +45,7 @@ useEffect(()=>{
                />
         </div>
         
-      {showResult && input.trim().length  > 0 && searchResult.length>0 &&  <div className=" w-1/2 mx-auto border-2 border-black-800">
+      {showResult && input.trim().length  > 0 && searchResult.length> 0 &&  <div className=" w-1/2 mx-auto border-2 border-black-800">
             {searchResult?.map((r)=>(
                 <div className=" flex p-2 bg-grey shadow-lg justify-between">
                 <span className="text-sm font-medium" key={r.id}>{r.name}</span>
