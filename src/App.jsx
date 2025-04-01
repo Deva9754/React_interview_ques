@@ -11,6 +11,7 @@ import Quiz from './components/pagination/Quiz';
 import Pagination from './components/pagination/Pagination';
 import LoginYup from './components/LoginYup';
 import Tabs from './components/tabs/Tabs';
+import AutoCompletion from './components/tabs/AutoCompletion';
 
 const App = () => {
   return (
@@ -25,6 +26,8 @@ const App = () => {
           <Route path ="/pagination" element={<Pagination/>}/>
           <Route path="/loginyup" element={<LoginYup/>}/>
           <Route path='/tabs' element={<Tabs/>}/>
+          <Route path='/auto-completion' element={<AutoCompletion/>}/>
+
         </Routes>
       </Router>
     </Provider>

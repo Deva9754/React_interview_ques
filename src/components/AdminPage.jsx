@@ -131,8 +131,8 @@ const AdminPage = () => {
 
   // Dummy grid items
   const gridItems = [
-    'QUIZ', 'Pagination', 'Login-Yup', 'M/B-Tabs',
-    'Item 4', 'Item 5', 'Item 6',
+    'Quiz', 'Pagination', 'Login-Yup', 'M/B-Tabs',
+    'Auto Completion Bar', 'Item 5', 'Item 6',
     'Item 7', 'Item 8'
   ];
 
@@ -167,6 +167,8 @@ const AdminPage = () => {
                 navigate('/loginyup');
               }else if (item === 'M/B-Tabs') {
                 navigate('/tabs');
+              }else if (item === 'Auto Completion Bar') {
+                navigate('/auto-completion');
               }
             }}
           >
