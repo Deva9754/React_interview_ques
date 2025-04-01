@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const AutoCompletion = ()=>{
     const [input,setInput]=useState("");
     const [searchResult,setSearchResult]=useState([]);
-    const [showResult,setShowResult]=useState(false);
+    const [showResult,setShowResult]=useState(true);
     const [cached,setCached]=useState({});
     
 
@@ -14,10 +14,10 @@ const fetchData= async ()=>{
         setSearchResult(cached[input]);
         return;
     }
-    console.log("API CALL",input)
+    // console.log("API CALL",input)
 const fetchResult = await fetch("https://dummyjson.com/recipes/search?q=" + input);
 const data= await fetchResult.json();
-console.log(data?.recipes[0]?.name,"Data")
+console.log(data?.recipes,"Data")
 setSearchResult(data?.recipes);
 setCached((prev)=>({...prev,[input]:data?.recipes}))
 
@@ -47,8 +47,10 @@ useEffect(()=>{
         
       {showResult && input.trim().length  > 0 && searchResult.length>0 &&  <div className=" w-1/2 mx-auto border-2 border-black-800">
             {searchResult?.map((r)=>(
-                
-                <span className=" block p-2 bg-grey shadow-lg " key={r.id}>{r.name}</span>
+                <div className=" flex p-2 bg-grey shadow-lg justify-between">
+                <span className="text-sm font-medium" key={r.id}>{r.name}</span>
+<img className="w-10 h-10 rounded-full object-cover " src={r.image} alt="" />
+                </div>
 
             ))}
             </div>}
