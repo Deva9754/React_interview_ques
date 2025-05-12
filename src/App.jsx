@@ -12,13 +12,14 @@ import Pagination from './components/pagination/Pagination';
 import LoginYup from './components/LoginYup';
 import Tabs from './components/tabs/Tabs';
 import AutoCompletion from './components/tabs/AutoCompletion';
+import PostList from './components/graph/PostList';
 
 const App = () => {
   return (
     <Provider store={store}>
       <Router>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<PostList />} />
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/admin" element={<AdminPage />} />
