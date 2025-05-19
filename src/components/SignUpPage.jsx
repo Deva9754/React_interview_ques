@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { auth, googleProvider, createUserWithEmailAndPassword, signInWithPopup } from '../firebase/Firebase'; // Firebase imports
 import { setDoc, doc } from 'firebase/firestore';  // Import Firestore functions
-import { db } from '../firebase/Firebase';  // Import db from Firebase
+import { db } from '../firebase/Firebase';  // Import db from Firebase;
+
+
+
+
 
 const SignUpPage = () => {
   const [formData, setFormData] = useState({ email: '', password: '', username: '' });
